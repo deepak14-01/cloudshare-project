@@ -15,7 +15,7 @@ const fileURL = document.querySelector("#fileURL");
 
 const toast = document.querySelector(".toast");
 
-const baseURL = "https://cloudshare-project.onrender.com/";
+const baseURL = "https://cloudshare-project.onrender.com";
 const uploadURL = `${baseURL}/api/files`;
 const emailURL = `${baseURL}/api/files/send`;
 
