@@ -25,7 +25,7 @@
     "node-fetch": "^3.2.6",
     "nodemailer": "^6.9.1",
     "uuid": "^9.0.0",
-    "webpack": "^4.47.0"
+    "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
