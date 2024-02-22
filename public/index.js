@@ -11,11 +11,11 @@ const status = document.querySelector(".status");
 const sharingContainer = document.querySelector(".sharing-container");
 const copyURLBtn = document.querySelector("#copyURLBtn");
 const fileURL = document.querySelector("#fileURL");
-const emailForm = document.querySelector("#emailForm");
+// const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
-const baseURL = "https://cloudshare-pvuj.onrender.com";
+const baseURL = "http://localhost:3000";
 const uploadURL = `${baseURL}/api/files`;
 const emailURL = `${baseURL}/api/files/send`;
 
@@ -124,8 +124,8 @@ const onFileUploadSuccess = (res) => {
   status.innerText = "Uploaded";
 
   // remove the disabled attribute from form btn & make text send
-  emailForm[2].removeAttribute("disabled");
-  emailForm[2].innerText = "Send";
+  // emailForm[2].removeAttribute("disabled");
+  // emailForm[2].innerText = "Send";
   progressContainer.style.display = "none"; // hide the box
 	console.log(JSON.parse(res));
   const { file: url } = JSON.parse(res);
@@ -133,7 +133,7 @@ const onFileUploadSuccess = (res) => {
   sharingContainer.style.display = "block";
   fileURL.value = url;
 };
-
+/*
 emailForm.addEventListener("submit", (e) => {
   e.preventDefault(); // stop submission
 
@@ -164,6 +164,7 @@ emailForm.addEventListener("submit", (e) => {
       }
     });
 });
+*/
 
 let toastTimer;
 // the toast function
